@@ -1,0 +1,102 @@
+.sidebar {
+  width: 270px;
+  background-color: #ffffff;
+  border-right: 1px solid #eeeeee;
+  padding: 24px 18px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  height: 100vh;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Add-question button */
+.add-question-btn {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.divider {
+  height: 1px;
+  background-color: #eeeeee;
+  margin: 5px 0;
+}
+
+/* Section titles */
+.sections p,
+.test-info p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #888888;
+  text-transform: uppercase;
+  margin: 24px 0 12px;
+}
+
+/* Section and info lists */
+.sections ul,
+.test-info ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sections li,
+.test-info li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  color: #333333;
+  font-size: 16px;
+  padding-left: 25px;
+}
+
+/* Circle styles */
+.circle::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.red-circle::before {
+  background-color: red;
+}
+
+.blue-circle::before {
+  background-color: blue;
+}
+
+.gray-circle::before {
+  border: 2px solid #6c757d;
+  background-color: transparent;
+}
+
+/* ---------- Responsive Sidebar (Mobile) ---------- */
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background-color: #fff;
+    transform: translateX(0);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar.hidden {
+    transform: translateX(-100%);
+  }
+}

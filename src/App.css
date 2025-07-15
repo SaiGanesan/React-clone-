@@ -1,0 +1,64 @@
+
+/* Full height layout setup */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* Wrapper for the entire app */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Navbar stays on top */
+.navbar {
+  height: 80px; /* Adjust if your navbar height is different */
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+
+/* Main layout beneath the navbar: sidebar + content */
+.main-layout {
+  display: flex;
+  flex: 1;
+  height: calc(100% - 80px); /* Adjust if navbar height is different */
+  overflow: hidden;
+}
+
+/* Sidebar scrolls independently */
+.sidebar {
+  width: 270px;
+  background-color: #ffffff;
+  border-right: 1px solid #eeeeee;
+  padding: 24px 18px;
+  overflow-y: auto;
+}
+
+/* Main content (TestPage) scrolls independently */
+.test-page {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px 32px;
+  background-color: #f5f6fa;
+}
+
+/* Optional: Prevent scrollbar from overlapping content */
+.test-page::-webkit-scrollbar {
+  width: 8px;
+}
+
+.test-page::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+
